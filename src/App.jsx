@@ -1,22 +1,11 @@
-import { useState } from 'react'
-import Nav from './components/Nav'
-import Products from './components/Products'
-import axios from './utils/axios'
+import MainRoutes from './routes/MainRoutes'
 
 function App() {
-const getProducts = async()=>{
 
-  const data = await axios('/products');
-  console.log(data);
-}
-getProducts()
   return (
     <>
-    <div className="main bg-[#457b9d] h-screen w-full flex">
-      <Nav/>
-      <Products/>
-    </div>
+      <MainRoutes/>
     </>
   )
-  }
+}
 export default App
