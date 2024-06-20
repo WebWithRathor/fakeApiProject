@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Card = ({id,title,img}) => {
   return (
-    <div className="card  h-[40vh] bg-[#f1faee] rounded-xl flex flex-col items-center justify-between overflow-hidden gap-2 shadow-[0px_3px_13px_#1d3557]">
+    <div className="card  h-[40vh] bg-[#f1faee] rounded-xl flex flex-col items-center justify-between overflow-hidden gap-2 border-4 border-[#f1faee] shadow-xl">
       <img className='h-[80%]  object-contain shrink-0 w-full mix-blend-darken p-7' src={img} alt="" />
       <div className="desc flex items-center justify-between w-full pt-2.5 bg-[#1d3557] px-4 py-3 text-[#f1faee]">
         <p className='font-semibold'>{title.substring(0,10) + "..."}</p>

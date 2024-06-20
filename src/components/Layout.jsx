@@ -8,6 +8,7 @@ const Layout = () => {
             <div className="main  bg-[#457b9d] h-screen w-full flex">
                 <Nav />
                 <Products />
+               
             </div>
         </>
     )
