@@ -8,25 +8,24 @@ const Products = () => {
   const [Products] = useContext(productcontext);
   const [filterProducts, setfilterProducts] = useState(null)
   let categoryProduct = useLocation()
-  console.log(filterProducts);
   categoryProduct = decodeURIComponent(categoryProduct.search.split('=')[1])
 
   const getCategoryProduct = async () => {
-    if (categoryProduct) {
+    if (categoryProduct  !== 'undefined') {
       try {
         const { data } = await axios.get(`/products/category/${categoryProduct}`)
         setfilterProducts(data);
       } catch (error) {
         console.log(error.message);
       }
-    }else{
-      setfilterProducts(Products)
     }
   }
 
   useEffect(()=>{
-    getCategoryProduct()
-  },[categoryProduct])
+    if(categoryProduct === 'undefined') setfilterProducts(Products);
+    getCategoryProduct();
+    console.log(filterProducts);
+  },[categoryProduct,Products])
   
   return (
     <div className='grid grid-cols-5 h-fit max-h-screen w-full p-7 px-14 gap-8 overflow-y-auto'>
