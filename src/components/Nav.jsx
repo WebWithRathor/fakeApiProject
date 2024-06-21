@@ -46,6 +46,7 @@ const Nav = () => {
 
         })}
       </ul>
+      <Link to='/create'><button className='w-full py-3 border-2 rounded-lg mt-4 flex gap-2 justify-center hover:bg-[#457b9d] hover:text-[#f1faee] transition-all'><i className="ri-shopping-cart-line"></i>Add Product</button></Link>
     </div>
 
   )

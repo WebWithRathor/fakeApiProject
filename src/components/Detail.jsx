@@ -21,7 +21,10 @@ const Detail = () => {
   },[])
 
   return (
-    !product ? <h1 className='text-center mt-72 h-screen text-4xl font-semibold text-[#1d3557]'>Loading...</h1> : <div className='flex items-center justify-center h-screen w-full gap-5 bg-[#eaeaea]'>
+    !product ? <div className='flex items-center justify-center h-screen w-full gap-5 bg-[#eaeaea]'>
+        <div className="bg-[#1d3557] w-[20%] h-2/3 rounded-lg animate-pulse "></div>
+        <div className="bg-[#1d3557] w-1/3 h-2/3 rounded-lg animate-pulse "></div>
+    </div>  : <div className='flex items-center justify-center h-screen w-full gap-5 bg-[#eaeaea]'>
       <Link to={`/?category=${product.category}`} className='absolute top-5 left-5 w-[11vw]' > <button
   type="button"
   className="bg-[#f1faee] border-2 mb-4 text-center w-full rounded-2xl py-3.5 relative font-sans text-black text-xl font-semibold group"
