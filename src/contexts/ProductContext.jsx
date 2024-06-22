@@ -9,6 +9,8 @@ const ProductsContext = (props) => {
     const getProducts = async()=>{
       try {
         const {data} = await axios.get('/products');
+        const localProducts = JSON.parse(localStorage.getItem('products'));
+        if(localProducts)data.push(...localProducts);
         setproducts(data);
       } catch (error) {
         console.log(error.message);
