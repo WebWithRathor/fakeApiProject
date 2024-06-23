@@ -29,7 +29,7 @@ const Products = () => {
   },[categoryProduct,Products])
   
   return (
-    <div key={categoryProduct} className='grid grid-cols-5 h-fit max-h-screen w-full p-7 px-14 gap-8 overflow-y-auto'>
+    <div key={categoryProduct} className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  2xl:grid-cols-5 h-fit max-h-screen w-full p-7 px-14 gap-8 overflow-y-auto'>
       {filterProducts ?
         filterProducts.map((e)=><Card key={e.id} title={e.title} id={e.id} img={e.image} />) :
         <><div className="bg-gray-200 rounded-lg animate-pulse h-[40vh]"></div>

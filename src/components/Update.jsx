@@ -31,21 +31,21 @@ const Update = () => {
     return (
         <>
             {product ? <div className="h-screen flex flex-col w-full justify-center items-center">
-                <h1 className='w-[35%] px-8 font-bold text-[#1d3557] text-3xl'>Add Product</h1>
-                <form onSubmit={updateHandler} className="p-7 w-[35%] space-y-5">
+                <h1 className='w-full sm:w-[35%] px-8 font-bold text-[#1d3557] text-3xl'>Add Product</h1>
+                <form onSubmit={updateHandler} className="p-7 w-full sm:w-[35%] space-y-5">
                     <div className="w-full flex gap-3">
                         <input required value={title} onChange={(e) => settitle(e.target.value)} type="text" placeholder='Title' className='capitalize  shadow-2xl p-3 w-1/2 outline-none focus:border-solid focus:border-[1px] border-[#457b9d] rounded' />
                         <input required value={price} onChange={(e) => setprice(e.target.value)} type="number" placeholder='price (in $)' className='capitalize  shadow-2xl p-3 w-1/2 outline-none focus:border-solid focus:border-[1px] border-[#457b9d] rounded' />
                     </div>
                     <input required type="url" value={image} onChange={(e) => setimage(e.target.value)} placeholder='ImageURL' className='capitalize  shadow-2xl p-3 w-full outline-none focus:border-solid focus:border-[1px] border-[#457b9d] rounded' />
-                    <div className="w-full flex items-center justify-between">
-                        <select value={category} onChange={(e) => setcategory(e.target.value)} name="" id="" className='capitalize  shadow-2xl p-3 w-1/3 outline-none focus:border-solid focus:border-[1px] border-[#457b9d] rounded'>
+                    <div className="w-full flex sm:flex-row flex-col items-center justify-between">
+                        <select value={category} onChange={(e) => setcategory(e.target.value)} name="" id="" className='capitalize  shadow-2xl p-3 w-full sm:w-1/3 outline-none focus:border-solid focus:border-[1px] border-[#457b9d] rounded'>
                             <option value="electronics">electronics</option>
                             <option value="jewelery">jewelery</option>
                             <option value="men's clothing">men's clothing</option>
                             <option value="women's clothing">women's clothing</option>
                         </select>
-                        <h1 className='text-lg'>Rating :</h1>
+                        <h1 className='text-xl sm:text-lg py-3 sm:py-0'>Rating :</h1>
                         <div className="rating">
                             <input name='star-radio' type="radio" onChange={(e) => setrating(e.target.value)} checked={rating === '5' ? true : false} value="5" id="star-1" />
                             <label htmlFor="star-1">

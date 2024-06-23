@@ -12,7 +12,7 @@ const Nav = () => {
 
 
   return (
-    <div className="left bg-[#f1faee] text-[rgb(29,53,87)]  w-[16%] h-screen px-5 py-5">
+    <div className="left bg-[#f1faee] text-[rgb(29,53,87)]  w-full sm:w-[16%] h-screen px-5 py-5">
 <Link to="/" className={search === '' ? "hidden" : "initial"}> <button
   type="button"
   className="bg-[#f1faee] border-2 mb-4 text-center w-full rounded-2xl py-3.5 relative font-sans text-black text-xl font-semibold group"

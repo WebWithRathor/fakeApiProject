@@ -34,16 +34,16 @@ const Detail = () => {
     !product ? <div className='flex items-center justify-center h-screen w-full gap-5 bg-[#eaeaea]'>
       <div className="bg-[#1d3557] w-[20%] h-2/3 rounded-lg animate-pulse "></div>
       <div className="bg-[#1d3557] w-1/3 h-2/3 rounded-lg animate-pulse "></div>
-    </div> : <div className='flex items-center justify-center h-screen w-full gap-5 bg-[#eaeaea]'>
-      <Link to={`/?category=${product.category}`} className='absolute top-5 left-5 w-[11vw]' > <button
+    </div> : <div className='flex p-5 pt-16 sm:flex-row flex-col items-center justify-center w-full gap-5 bg-[#eaeaea]'>
+      <Link to={`/?category=${product.category}`} className='absolute top-5 left-5 sm:w-[11vw] w-[35vw] ' > <button
         type="button"
-        className="bg-[#f1faee] border-2 mb-4 text-center w-full rounded-2xl py-3.5 relative font-sans text-black text-xl font-semibold group"
+        className="bg-[#f1faee] border-2 mb-4 text-center w-full rounded-2xl py-3.5 px-3 relative font-sans text-black text-md sm:text-xl font-semibold group flex items-center justify-end"
       >
         <div
-          className="bg-[#457b9d] rounded-xl h-12 w-1/4 flex items-center justify-center absolute left-1 top-1 group-hover:w-[95%] z-10 duration-500"
+          className="bg-[#457b9d] rounded-xl h-[80%] w-fit sm:w-1/4 flex items-center justify-center absolute left-1 top-1 group-hover:w-[95%] z-10 duration-500"
         >
           <svg
-            width="25px"
+            width="70%"
             height="100%"
             viewBox="0 0 1024 1024"
             xmlns="http://www.w3.org/2000/svg"
@@ -58,11 +58,11 @@ const Detail = () => {
             ></path>
           </svg>
         </div>
-        <p className="translate-x-2">Go Back</p>
+        <p className="">Go Back</p>
       </button></Link>
-      <div className="productImg rounded p-10 h-2/3 w-[25%] bg-[#eaeaea]">
+      <div className="productImg rounded p-10 h-2/3 w-full sm:w-[25%] bg-[#eaeaea]">
         <img className='h-full w-full object-contain mix-blend-darken' src={product.image} alt="" /></div>
-      <div className="productDesc rounded-lg text-[#f1faee] w-1/3 bg-[#457b9d] p-7 overflow-auto">
+      <div className="productDesc h-fit rounded-lg text-[#f1faee] w-full mx-3 sm:w-1/3 bg-[#457b9d] p-7">
         <h1 className='font-semibold break-all'>{product.category}</h1>
         <h1 className='font-semibold break-all text-3xl mt-3'>${product.price}</h1>
         <h1 className='font-semibold break-all text-4xl mb-3'>{product.title}</h1>
